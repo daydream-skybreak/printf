@@ -20,7 +20,7 @@ int (*get_op(const char c))(va_list)
 		{"b", print_binary},
 		{"d", print_nbr}
 	};
-	while (i < 5)
+	while (i < 6)
 	{
 		if (c == fp[i].c[0])
 		{
