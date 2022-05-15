@@ -68,7 +68,7 @@ int print_number(int n)
 /**
  * _nbr_len - length of a number
  * @prmNumber: number
- * OB
+
  * Return: length of the number
  */
 
@@ -77,6 +77,7 @@ int _nbr_len(int prmNumber)
 	int cLoop = 0, number;
 
 	if (prmNumber == 0)
+		B
 		return (1);
 
 	number = prmNumber;

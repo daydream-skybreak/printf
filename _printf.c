@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (BBformat[i] == '%')
 		{
 			if (format[i + 1] != '\0')
 				func = get_op(format[i + 1]);
