@@ -77,7 +77,6 @@ int _nbr_len(int prmNumber)
 	int cLoop = 0, number;
 
 	if (prmNumber == 0)
-		B
 		return (1);
 
 	number = prmNumber;
