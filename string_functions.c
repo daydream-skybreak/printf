@@ -50,13 +50,3 @@ int print_percent(va_list args __attribute__((unused)))
 	return (_putchar('%'));
 }
 
-/**
- * print_nbr - print number
- * @ap: arg list
- * Return: number of printed char
- */
-
-int print_nbr(va_list ap)
-{
-	return (print_number(va_arg(ap, int)));
-}
