@@ -20,7 +20,7 @@ int (*get_op(const char c))(va_list)
 		{"b", print_binary},
 		{"d", print_nbr}
 	};
-	while (i < 5)
+	while (i < 6)
 	{
 		if (c == fp[i].c[0])
 		{
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (BBformat[i] == '%')
 		{
 			if (format[i + 1] != '\0')
 				func = get_op(format[i + 1]);
