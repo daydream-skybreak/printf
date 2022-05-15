@@ -1,3 +1,4 @@
+#include <stdarg.h>
 #include "main.h"
 #include <stddef.h>
 
@@ -14,9 +15,11 @@ int (*get_op(const char c))(va_list)
 	flags_p fp[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_percent}
+		{"%", print_percent},
+		{"i", print_nbr},
+		{"d", print_nbr}
 	};
-	while (i < 3)
+	while (i < 5)
 	{
 		if (c == fp[i].c[0])
 		{

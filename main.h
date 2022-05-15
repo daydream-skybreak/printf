@@ -10,7 +10,12 @@ int _printf(const char *format, ...);
 int print_char(va_list ap);
 int print_str(va_list ap);
 int print_percent(va_list ap __attribute__((unused)));
-
+int print_nbr(va_list ap);
+int print_number(int n);
+int print_unsigned_number(unsigned int n);
+int _nbr_len(int prmNumber);
+int print_rot13(va_list ap);
+int print_unsigned(va_list ap);
 
 int _putchar(char c);
 int _puts(char *str, int ascii);
