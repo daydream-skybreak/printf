@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
+int print_binary(va_list ap);
 int _printf(const char *format, ...);
 int print_char(va_list ap);
 int print_str(va_list ap);
