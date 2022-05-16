@@ -24,8 +24,10 @@ int (*get_op(const char c))(va_list)
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"S", print_str_unprintable}
+		{"r", print_str_reverse},
+		{"R", print_rot13}
 	};
-	while (i < 11)
+	while (i < 13)
 	{
 		if (c == fp[i].c[0])
 		{

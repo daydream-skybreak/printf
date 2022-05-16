@@ -43,4 +43,3 @@ int _puts(char *str, int ascii)
 	}
 	return (sum);
 }
-
