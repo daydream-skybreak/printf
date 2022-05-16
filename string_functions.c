@@ -49,3 +49,22 @@ int print_percent(va_list args __attribute__((unused)))
 {
 	return (_putchar('%'));
 }
+/**
+ * print_str_unprintable - unprint some characters
+ * @ap: arg list
+ * Return: number of printed char
+ */
+
+int print_str_unprintable(va_list ap)
+{
+	char *argument = va_arg(ap, char *);
+	int sum = 0;
+
+	if (!argument)
+	{
+		sum += _puts("(null)", 0);
+		return (sum);
+	}
+
+	return (_puts(argument, 1));
+}

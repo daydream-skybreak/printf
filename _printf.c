@@ -22,9 +22,10 @@ int (*get_op(const char c))(va_list)
 		{"x", print_hexa_lower},
 		{"X", print_hexa_upper},
 		{"o", print_octal},
-		{"u", print_unsigned}
+		{"u", print_unsigned},
+		{"S", print_str_unprintable}
 	};
-	while (i < 10)
+	while (i < 11)
 	{
 		if (c == fp[i].c[0])
 		{
