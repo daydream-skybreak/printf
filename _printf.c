@@ -35,6 +35,7 @@ int (*get_op(const char c))(va_list)
  * _printf - Reproduce behavior of printf function
  * @format: format string
  * Return: value of printed chars
+ * OA
  */
 
 int _printf(const char *format, ...)
@@ -49,7 +50,7 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		if (BBformat[i] == '%')
+		if (format[i] == '%')
 		{
 			if (format[i + 1] != '\0')
 				func = get_op(format[i + 1]);
