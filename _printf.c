@@ -23,7 +23,7 @@ int (*get_op(const char c))(va_list)
 		{"X", print_hexa_upper},
 		{"o", print_octal},
 		{"u", print_unsigned},
-		{"S", print_str_unprintable}
+		{"S", print_str_unprintable},
 		{"r", print_str_reverse},
 		{"R", print_rot13}
 	};
