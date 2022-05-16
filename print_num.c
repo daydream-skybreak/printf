@@ -10,6 +10,7 @@ int print_nbr(va_list ap)
 {
 	return (print_number(va_arg(ap, int)));
 }
+
 /**
  * print_unsigned_number - print unsigned number
  * @n: unsigned int to print
@@ -65,10 +66,10 @@ int print_number(int n)
 	}
 	return (0);
 }
+
 /**
  * _nbr_len - length of a number
  * @prmNumber: number
-
  * Return: length of the number
  */
 
@@ -95,6 +96,7 @@ int _nbr_len(int prmNumber)
 
 	return (cLoop);
 }
+
 /**
  * print_binary - print number binary base
  * @ap: arg list
@@ -119,4 +121,3 @@ int print_binary(va_list ap)
 	free(str);
 	return (sum);
 }
-

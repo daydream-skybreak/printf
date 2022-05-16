@@ -65,6 +65,13 @@ char *convert_base_pointer(unsigned long p)
 	str = convert_base(adress, 16, 0);
 	return (str);
 }
+
+/**
+ * convert_rot13 - encode using rot13
+ * @str: string to encode
+ * Return: encoded string
+ */
+
 char *convert_rot13(char *str)
 {
 	int i = 0;
