@@ -18,9 +18,13 @@ int (*get_op(const char c))(va_list)
 		{"%", print_percent},
 		{"i", print_nbr},
 		{"b", print_binary},
-		{"d", print_nbr}
+		{"d", print_nbr},
+		{"x", print_hexa_lower},
+		{"X", print_hexa_upper},
+		{"o", print_octal},
+		{"u", print_unsigned}
 	};
-	while (i < 6)
+	while (i < 10)
 	{
 		if (c == fp[i].c[0])
 		{
