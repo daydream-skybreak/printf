@@ -61,3 +61,79 @@ int _strlen_recursion(char *s)
 		return (0);
 	}
 }
+
+/**
+ * _itoa - Convert an int to a string
+ * @prmNumber: int to convert
+ * Return: converted string
+ */
+
+char *_itoa(int prmNumber)
+{
+	char *s;
+	int cLoop;
+	long number;
+
+	number = prmNumber;
+	cLoop = _nbr_len(number);
+	s = malloc(sizeof(char) * cLoop + 1);
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	s[cLoop] = '\0';
+
+	if (number == 0)
+	{
+		s = "0";
+	}
+	else if (number < 0)
+	{
+		s[0] = '-';
+		number *= -1;
+	}
+
+	while (number)
+	{
+		s[--cLoop] = number % 10 + 48;
+		number /= 10;
+	}
+
+	return (s);
+}
+
+/**
+ * _strdup - a pointer to a newly allocated space in memory,
+ *           which contains a copy of the string given as a parameter.
+ *
+ * @str: char pointer to copy
+ *
+ * Return: a new char pointer
+ */
+char *_strdup(char *str)
+{
+	char *s;
+	int cLoop;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	s = malloc(sizeof(char) * (_strlen_recursion(str) + 1));
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	for (cLoop = 0; cLoop < _strlen_recursion(str) + 1; cLoop++)
+	{
+		s[cLoop] = str[cLoop];
+	}
+
+	return (s);
+}
+
